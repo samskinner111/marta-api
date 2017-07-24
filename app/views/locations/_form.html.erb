@@ -12,23 +12,12 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :address %>
-    <%= form.text_field :address, id: :location_address %>
+    <%= f.text_field :address, 
+      placeholder: "Address or Approx. Location" %>
   </div>
 
   <div class="field">
-    <%= form.label :city %>
-    <%= form.text_field :city, id: :location_city %>
-  </div>
-
-  <div class="field">
-    <%= form.label :longitude %>
-    <%= form.text_field :longitude, id: :location_longitude %>
-  </div>
-
-  <div class="field">
-    <%= form.label :latitude %>
-    <%= form.text_field :latitude, id: :location_latitude %>
+    <%= f.text_field :city, placeholder: "City" %>
   </div>
 
   <div class="actions">
