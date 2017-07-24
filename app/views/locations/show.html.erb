@@ -1,26 +1,31 @@
-<p id="notice"><%= notice %></p>
-
-<h2>You Are Currently Standing At...</h2>
-<p>
-  <%= @location.my_location %>
-</p>
-
-<h2>The Closest Buses Are...</h2>
-
-<% if @bus_count == 0 %>
-  <p>
-    ...not really that close. Better order a Lyft. 
-    Or call a friend. Or just give up and go back inside and 
-    watch some TV. Going places is overrated.
-    </p>
-<% end %>
-
-<% @nearby_buses.each do |bus| %>
-  <p>
-    <strong>Route:</strong> <%= bus["ROUTE"] %><br />
-    <strong>Vehicle:</strong> <%= bus["VEHICLE"] %><br />
-    <strong>Next Stop:</strong> <%= bus["TIMEPOINT"] %>
+<% if notice != nil %>
+  <p id="notice" class="alert alert-success" role="alert">
+    <%= notice %>
   </p>
 <% end %>
 
-<%= link_to "Actually, I'm at...", edit_location_path(@location) %>
+<div class='row'>
+  <div class='col-md-6 col-md-offset-3'>
+    <h3>You're Currently Standing At...</h3>
+    <p><%= @location.my_location %></p>
+    <br>
+    <h3>The Closest Buses Are...</h3>
+
+    <% if @bus_count == 0 %>
+      <p>
+        ...not really that close. Better order a Lyft. 
+        Or call a friend. Or just give up and go back inside and 
+        watch some TV. Going places is overrated.
+      </p>
+      <h4><%= link_to "Actually, I'm at...", edit_location_path(@location) %></h4>
+    <% end %>
+
+    <% @nearby_buses.each do |bus| %>
+      <p>
+        <strong>Route:</strong> <%= bus["ROUTE"] %><br />
+        <strong>Vehicle:</strong> <%= bus["VEHICLE"] %><br />
+        <strong>Next Stop:</strong> <%= bus["TIMEPOINT"] %>
+      </p>
+    <% end %>
+  </div>
+</div>

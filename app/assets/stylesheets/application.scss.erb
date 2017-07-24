@@ -13,3 +13,15 @@
  *= require_tree .
  *= require_self
  */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
+
+body {
+  background: url(<%#= asset_path "bg.jpg" %>) no-repeat;
+  max-width: 960px;
+  background-size: cover;
+}
+
+#center-it { text-align: center; }

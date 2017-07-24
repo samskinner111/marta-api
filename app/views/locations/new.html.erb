@@ -1,9 +1,12 @@
-<h1>Is a Bus Nearby?</h1>
-
-<p>
-  Give us your address or approximate location
-  (<em>I'm at the corner of...</em>), and we'll
-  let you know if there's a bus in vicinity!
-</p>
-
-<%= render 'form' %>
+<div class='row'>
+  <div class='col-md-6 col-md-offset-3' id='center-it'>
+    <h1>Is a Bus Nearby?</h1>
+    <br>
+    <div>
+      <h4>Give us your address or approximate location (<em>I'm at the corner of...</em>), and we'll let you know if there's a bus in vicinity!
+      </h4>
+    </div>
+    <br>
+    <%= render 'form', location: @location %>
+  </div>
+</div>
