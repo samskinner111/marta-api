@@ -19,14 +19,17 @@
 @import "font-awesome";
 
 body {
-  background: url(<%#= asset_path "bg.jpg" %>) no-repeat;
+  background: url(<%= asset_path "bg.jpg" %>) no-repeat;
   max-width: 960px;
   background-size: cover;
 }
 
-#center-it { text-align: center; }
-
-.bus-map { 
+.bus-map {
+  margin-left: 23%;
   height: 200px;
-  width: 200px;
+  width: 300px;
  }
+
+.center-it { text-align: center; }
+
+#pad-top-35 { padding-top: 35px; }

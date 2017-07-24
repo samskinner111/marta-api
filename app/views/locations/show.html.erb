@@ -5,11 +5,11 @@
 <% end %>
 
 <div class='row'>
-  <div class='col-md-6 col-md-offset-3'>
+  <div class='col-md-6 col-md-offset-3 center-it'>
     <h3>You're Currently Standing At...</h3>
     <p><%= @location.my_location %></p>
     <br>
-    <h3>The Closest Buses Are...</h3>
+    <h3 id='pad-bot-35'>The Closest Buses Are...</h3>
 
     <% if @bus_count == 0 %>
       <p>
@@ -21,7 +21,7 @@
     <% end %>
 
     <% @nearby_buses.each_with_index do |bus, index| %>
-      <p>
+      <p id='pad-top-35'>
         <strong>Route:</strong> <%= bus["ROUTE"] %><br />
         <strong>Vehicle:</strong> <%= bus["VEHICLE"] %><br />
         <strong>Next Stop:</strong> <%= bus["TIMEPOINT"] %>
@@ -77,7 +77,6 @@
       </script>
       <div class="bus-map" id="map-canvas<%= index %>"></div>
       <!-- End maps -->
-      <br>
    <% end %>
   </div>
 </div>
