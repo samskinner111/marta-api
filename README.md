@@ -1,24 +1,10 @@
-# README
+*** Marta API app with Google Maps ***
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Ruby version: 2.4.1
+Rails version: 5.1.2
 
-Things you may want to cover:
+Run 'bundle install', 'figaro install' and 'rails db:migrate'.
 
-* Ruby version
+Get an API key from google and put it in config/application.yml.  ('google_api_key: xxxx')  The link for the Google API key is: https://developers.google.com/maps/documentation/embed/get-api-key.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+No key is needed for Marta.
