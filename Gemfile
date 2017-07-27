@@ -7,7 +7,7 @@ end
 
 ruby '2.4.1'
 gem 'rails', '~> 5.1.2'
-gem 'sqlite3'
+
 gem 'puma', '~> 3.7'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
@@ -25,6 +25,7 @@ gem 'figaro'
 gem 'jquery-rails'
 
 group :development, :test do
+  gem 'sqlite3'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
@@ -37,4 +38,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
-
+group :production do 
+  gem 'pg'
+  gem 'rails_12factor'
+end
